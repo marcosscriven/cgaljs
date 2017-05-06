@@ -1,0 +1,23 @@
+# the name of the target operating system
+SET(CMAKE_SYSTEM_NAME Linux)
+
+# which C and C++ compiler to use
+SET(CMAKE_C_COMPILER   emcc)
+SET(CMAKE_CXX_COMPILER em++)
+SET(CMAKE_AR           emar)
+SET(CMAKE_RANLIB       emranlib)
+SET(CMAKE_C_FLAGS      -g)
+SET(CMAKE_CXX_FLAGS    -g)
+
+# adjust the default behaviour of the FIND_XXX() commands:
+# search headers and libraries in the target environment, search
+# programs in the host environment
+set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE BOTH)
+set(CMAKE_FIND_ROOT_PATH_MODE_PACKAGE ONLY)
+
+SET( GMP_RUN_RES "0" CACHE STRING "Result from TRY_RUN" FORCE)
+SET( GMP_RUN_RES__TRYRUN_OUTPUT "version=5.1.1" CACHE STRING "Output from TRY_RUN" FORCE)
+SET( MPFR_RUN_RES "0" CACHE STRING "Result from TRY_RUN" FORCE)
+SET( MPFR_RUN_RES__TRYRUN_OUTPUT "version=3.1.1" CACHE STRING "Output from TRY_RUN" FORCE)

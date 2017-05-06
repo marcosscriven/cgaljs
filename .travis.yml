@@ -1,0 +1,7 @@
+-language: cpp
+before_install:
+  - echo "Starting CGALJS build."
+  - sudo apt-get -qq update
+  - sudo apt-get install -y emscripten 
+  - emconfigure
+script:  python build_all.py

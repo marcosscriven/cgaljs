@@ -1,0 +1,11 @@
+--- config.h.original	2013-02-28 11:44:07.344000004 +0000
++++ config.h	2013-02-28 11:44:31.792000003 +0000
+@@ -196,7 +196,7 @@
+    || defined(_M_ALPHA) || defined(_WIN64)
+ #  define CGAL_LITTLE_ENDIAN
+ #else
+-#  error Unknown endianness
++#  define CGAL_LITTLE_ENDIAN
+ #endif
+ 
+ 

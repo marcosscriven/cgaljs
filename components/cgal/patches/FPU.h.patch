@@ -1,0 +1,20 @@
+60c60
+< #  include <fenv.h>
+---
+> #  // include <fenv.h>
+299,305c299,305
+< #define CGAL_IA_SETFPCW(CW)  fesetround(CW)
+< #define CGAL_IA_GETFPCW(CW)  CW = fegetround()
+< typedef int FPU_CW_t;
+< #define CGAL_FE_TONEAREST    FE_TONEAREST
+< #define CGAL_FE_TOWARDZERO   FE_TOWARDZERO
+< #define CGAL_FE_UPWARD       FE_UPWARD
+< #define CGAL_FE_DOWNWARD     FE_DOWNWARD
+---
+> #define CGAL_IA_SETFPCW(CW) // DO NOTHING FOR NOW
+> #define CGAL_IA_GETFPCW(CW) CW=CGAL_FE_TONEAREST
+> typedef unsigned short FPU_CW_t;
+> #define CGAL_FE_TONEAREST    (0x000 | 0x127f)
+> #define CGAL_FE_TOWARDZERO   (0xc00 | 0x127f)
+> #define CGAL_FE_UPWARD       (0x800 | 0x127f)
+> #define CGAL_FE_DOWNWARD     (0x400 | 0x127f)

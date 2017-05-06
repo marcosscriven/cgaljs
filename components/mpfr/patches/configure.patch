@@ -1,0 +1,11 @@
+--- configure.original	2013-02-25 12:20:12.744000004 +0000
++++ configure	2013-02-25 12:20:40.796000004 +0000
+@@ -14508,7 +14508,7 @@
+ 
+ fi
+ 
+-
++dont_link_with_gmp=yes
+ if test "$dont_link_with_gmp" = yes ; then
+ LIBS="-lgmp $LIBS"
+ else

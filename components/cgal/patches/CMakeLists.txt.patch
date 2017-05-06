@@ -1,0 +1,11 @@
+--- CMakeLists.txt.original	2013-03-07 18:48:39.540000004 +0000
++++ CMakeLists.txt	2013-03-07 18:49:00.308000007 +0000
+@@ -603,7 +603,7 @@
+ 
+ message("== Write compiler_config.h ==")
+ 
+-file(GLOB all_config_tests "${CGAL_INSTALLATION_PACKAGE_DIR}/config/testfiles/*.cpp")
++file(GLOB all_config_tests "${CGAL_INSTALLATION_PACKAGE_DIR}/config/testfiles/*.cppx")
+ 
+ list( SORT all_config_tests )
+ 
